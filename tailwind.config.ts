@@ -1,3 +1,4 @@
+
 import type { Config } from "tailwindcss";
 
 export default {
@@ -24,6 +25,18 @@ export default {
 				ring: 'hsl(var(--ring))',
 				background: 'hsl(var(--background))',
 				foreground: 'hsl(var(--foreground))',
+				forest: {
+          DEFAULT: '#15803D',
+          foreground: '#FFFFFF'
+        },
+        earth: {
+          DEFAULT: '#64748B',
+          foreground: '#FFFFFF'
+        },
+        lime: {
+          DEFAULT: '#A3E635',
+          foreground: '#15803D'
+        },
 				primary: {
 					DEFAULT: 'hsl(var(--primary))',
 					foreground: 'hsl(var(--primary-foreground))'
@@ -63,6 +76,9 @@ export default {
 					ring: 'hsl(var(--sidebar-ring))'
 				}
 			},
+			fontFamily: {
+				montserrat: ['Montserrat', 'sans-serif'],
+			},
 			borderRadius: {
 				lg: 'var(--radius)',
 				md: 'calc(var(--radius) - 2px)',
@@ -84,11 +100,36 @@ export default {
 					to: {
 						height: '0'
 					}
+				},
+				'fade-in': {
+					'0%': { opacity: '0' },
+					'100%': { opacity: '1' }
+				},
+				'fade-in-up': {
+					'0%': { opacity: '0', transform: 'translateY(20px)' },
+					'100%': { opacity: '1', transform: 'translateY(0)' }
+				},
+				'fade-in-down': {
+					'0%': { opacity: '0', transform: 'translateY(-20px)' },
+					'100%': { opacity: '1', transform: 'translateY(0)' }
+				},
+				'marquee': {
+					'0%': { transform: 'translateX(0%)' },
+					'100%': { transform: 'translateX(-100%)' }
+				},
+				'pulse-subtle': {
+					'0%, 100%': { transform: 'scale(1)' },
+					'50%': { transform: 'scale(1.05)' }
 				}
 			},
 			animation: {
 				'accordion-down': 'accordion-down 0.2s ease-out',
-				'accordion-up': 'accordion-up 0.2s ease-out'
+				'accordion-up': 'accordion-up 0.2s ease-out',
+				'fade-in': 'fade-in 0.6s ease-out',
+				'fade-in-up': 'fade-in-up 0.8s ease-out',
+				'fade-in-down': 'fade-in-down 0.8s ease-out',
+				'marquee': 'marquee 30s linear infinite',
+				'pulse-subtle': 'pulse-subtle 2s ease-in-out infinite'
 			}
 		}
 	},
