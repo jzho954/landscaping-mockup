@@ -73,7 +73,7 @@ const ContactForm = () => {
         <div className="max-w-3xl mx-auto">
           <div 
             ref={formRef}
-            className="bg-white rounded-2xl p-8 shadow-lg opacity-0"
+            className="bg-white rounded-2xl p-8 shadow-lg opacity-100"
           >
             <form onSubmit={handleSubmit} className="space-y-6">
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">

@@ -105,15 +105,15 @@ const Footer = () => {
             <ul className="space-y-4">
               <li className="flex items-start">
                 <MapPin className="h-5 w-5 text-lime mr-3 mt-0.5" />
-                <span className="text-gray-300">[Insert Address]<br />City, State, ZIP</span>
+                <span className="text-gray-300">123 Green Street<br />Lakeside, CA 92040</span>
               </li>
               <li className="flex items-center">
                 <Phone className="h-5 w-5 text-lime mr-3" />
-                <span className="text-gray-300">[Insert Phone]</span>
+                <span className="text-gray-300">(555) 123-4567</span>
               </li>
               <li className="flex items-center">
                 <Mail className="h-5 w-5 text-lime mr-3" />
-                <span className="text-gray-300">[Insert Email]</span>
+                <span className="text-gray-300">info@greenscape.com</span>
               </li>
               <li className="flex items-start">
                 <Clock className="h-5 w-5 text-lime mr-3 mt-0.5" />
