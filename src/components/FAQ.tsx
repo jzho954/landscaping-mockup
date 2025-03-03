@@ -80,7 +80,7 @@ const FAQ = () => {
           </p>
         </div>
 
-        <div ref={faqRef} className="max-w-3xl mx-auto opacity-0 transition-opacity duration-500">
+        <div ref={faqRef} className="max-w-3xl mx-auto opacity-100 transition-opacity duration-500">
           <Accordion type="single" collapsible className="w-full">
             {faqItems.map((item) => (
               <AccordionItem key={item.id} value={item.id} className="border-b border-gray-200">

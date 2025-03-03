@@ -91,7 +91,7 @@ const Testimonials = () => {
 
         <div 
           ref={containerRef}
-          className="overflow-hidden opacity-0"
+          className="overflow-hidden opacity-100"
         >
           <div 
             ref={contentRef}
