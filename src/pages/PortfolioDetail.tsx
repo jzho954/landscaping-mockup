@@ -1,4 +1,3 @@
-
 import { useParams, useNavigate } from "react-router-dom";
 import { useEffect, useState } from "react";
 import { Button } from "@/components/ui/button";
@@ -173,7 +172,12 @@ const PortfolioDetail = () => {
           <Button 
             variant="ghost" 
             className="mb-6 flex items-center text-forest hover:text-lime"
-            onClick={() => navigate("/#projects")}
+            onClick={() => {
+              navigate("/");
+              setTimeout(() => {
+                document.getElementById('projects')?.scrollIntoView({ behavior: 'smooth' });
+              }, 100);
+            }}
           >
             <ChevronLeft className="mr-2 h-4 w-4" />
             Back to Portfolio
