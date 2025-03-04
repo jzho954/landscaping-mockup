@@ -3,6 +3,7 @@ import { useState, useRef, useEffect } from "react";
 import { motion } from "framer-motion";
 import { ArrowLeft, ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { Link } from "react-router-dom";
 
 interface Project {
   id: number;
@@ -147,26 +148,28 @@ const Projects = () => {
                   transition={{ duration: 0.5, ease: "easeInOut" }}
                   className="w-full md:w-1/3 px-4 mb-8"
                 >
-                  <div className="bg-white rounded-xl overflow-hidden shadow-lg transition-all duration-300 hover:shadow-xl hover:scale-[1.02] h-full flex flex-col">
-                    <div className="relative h-64 overflow-hidden">
-                      <img 
-                        src={project.imageUrl} 
-                        alt={project.title} 
-                        className="w-full h-full object-cover transition-all duration-500 hover:scale-110"
-                      />
-                    </div>
-                    <div className="p-6 flex-grow">
-                      <h3 className="text-xl font-bold mb-2 text-forest">{project.title}</h3>
-                      <p className="text-earth mb-4">{project.description}</p>
-                      <div className="flex flex-wrap gap-2">
-                        {project.tags.map((tag, idx) => (
-                          <span key={idx} className="px-2 py-1 bg-lime/20 text-forest text-xs font-medium rounded-full">
-                            {tag}
-                          </span>
-                        ))}
+                  <Link to={`/portfolio/${project.id}`} className="block h-full">
+                    <div className="bg-white rounded-xl overflow-hidden shadow-lg transition-all duration-300 hover:shadow-xl hover:scale-[1.02] h-full flex flex-col">
+                      <div className="relative h-64 overflow-hidden">
+                        <img 
+                          src={project.imageUrl} 
+                          alt={project.title} 
+                          className="w-full h-full object-cover transition-all duration-500 hover:scale-110"
+                        />
+                      </div>
+                      <div className="p-6 flex-grow">
+                        <h3 className="text-xl font-bold mb-2 text-forest">{project.title}</h3>
+                        <p className="text-earth mb-4">{project.description}</p>
+                        <div className="flex flex-wrap gap-2">
+                          {project.tags.map((tag, idx) => (
+                            <span key={idx} className="px-2 py-1 bg-lime/20 text-forest text-xs font-medium rounded-full">
+                              {tag}
+                            </span>
+                          ))}
+                        </div>
                       </div>
                     </div>
-                  </div>
+                  </Link>
                 </motion.div>
               ))}
             </div>
