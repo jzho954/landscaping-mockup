@@ -40,7 +40,7 @@ const Projects = () => {
       id: 4,
       title: "Urban Rooftop Garden",
       description: "Transforming city spaces with container gardens and vertical planting systems.",
-      imageUrl: "https://images.unsplash.com/photo-1563341591-a4ef278cb0c7?ixlib=rb-1.2.1&auto=format&fit=crop&w=1000&q=80",
+      imageUrl: "https://images.unsplash.com/photo-1614594975525-e45190c55d0b?ixlib=rb-1.2.1&auto=format&fit=crop&w=1000&q=80",
       tags: ["Urban", "Rooftop", "Container"]
     },
     {
