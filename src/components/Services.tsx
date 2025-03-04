@@ -1,6 +1,7 @@
 
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { useState, useEffect, useRef } from "react";
+import { Link } from "react-router-dom";
 
 interface Service {
   id: number;
@@ -103,29 +104,34 @@ const Services = () => {
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {services.map((service) => (
-            <Card 
+            <Link 
+              to={`/services/${service.id}`} 
               key={service.id}
-              className={`service-card overflow-hidden transition-all duration-500 ${
-                visibleServices.includes(service.id) 
-                  ? 'opacity-100 translate-y-0' 
-                  : 'opacity-0 translate-y-10'
-              }`}
-              data-id={service.id}
+              className="block transition-transform hover:scale-[1.02] focus:outline-none focus:ring-2 focus:ring-lime focus:ring-offset-2 rounded-xl"
             >
-              <div className="relative h-48 overflow-hidden">
-                <img 
-                  src={service.image} 
-                  alt={service.title} 
-                  className="object-cover w-full h-full transition-transform duration-300 group-hover:scale-110"
-                />
-              </div>
-              <CardHeader className="pb-2">
-                <CardTitle className="text-xl font-bold text-forest">{service.title}</CardTitle>
-              </CardHeader>
-              <CardContent>
-                <CardDescription className="text-earth">{service.description}</CardDescription>
-              </CardContent>
-            </Card>
+              <Card 
+                className={`service-card overflow-hidden transition-all duration-500 h-full ${
+                  visibleServices.includes(service.id) 
+                    ? 'opacity-100 translate-y-0' 
+                    : 'opacity-0 translate-y-10'
+                }`}
+                data-id={service.id}
+              >
+                <div className="relative h-48 overflow-hidden">
+                  <img 
+                    src={service.image} 
+                    alt={service.title} 
+                    className="object-cover w-full h-full transition-transform duration-300 hover:scale-110"
+                  />
+                </div>
+                <CardHeader className="pb-2">
+                  <CardTitle className="text-xl font-bold text-forest">{service.title}</CardTitle>
+                </CardHeader>
+                <CardContent>
+                  <CardDescription className="text-earth">{service.description}</CardDescription>
+                </CardContent>
+              </Card>
+            </Link>
           ))}
         </div>
       </div>
