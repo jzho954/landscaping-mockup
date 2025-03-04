@@ -4,6 +4,7 @@ import { Button } from "@/components/ui/button";
 import { ChevronLeft, Tag } from "lucide-react";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import Timeline from "@/components/Timeline";
 
 interface ProjectDetail {
   id: number;
@@ -19,6 +20,11 @@ interface ProjectDetail {
   client: string;
   location: string;
   completionDate: string;
+  timeline: {
+    date: string;
+    title: string;
+    description: string;
+  }[];
 }
 
 const projects: ProjectDetail[] = [
@@ -39,7 +45,44 @@ const projects: ProjectDetail[] = [
     ],
     client: "Johnson Family",
     location: "Portland, Oregon",
-    completionDate: "Summer 2023"
+    completionDate: "Summer 2023",
+    timeline: [
+      {
+        date: "March 15, 2023",
+        title: "Initial Consultation",
+        description: "Met with clients to discuss their vision and assess the space"
+      },
+      {
+        date: "April 1, 2023",
+        title: "Design Phase",
+        description: "Completed detailed design plans including drainage solutions and plant selection"
+      },
+      {
+        date: "April 20, 2023",
+        title: "Site Preparation",
+        description: "Began soil remediation and drainage system installation"
+      },
+      {
+        date: "May 15, 2023",
+        title: "Hardscaping",
+        description: "Installation of pavers, retaining walls, and water feature"
+      },
+      {
+        date: "June 10, 2023",
+        title: "Planting",
+        description: "Installation of trees, shrubs, and perennial plants"
+      },
+      {
+        date: "June 25, 2023",
+        title: "Irrigation",
+        description: "Installation and testing of efficient irrigation system"
+      },
+      {
+        date: "July 1, 2023",
+        title: "Project Completion",
+        description: "Final walkthrough and client orientation"
+      }
+    ]
   },
   {
     id: 2,
@@ -58,7 +101,44 @@ const projects: ProjectDetail[] = [
     ],
     client: "Williams Residence",
     location: "Seattle, Washington",
-    completionDate: "Spring 2022"
+    completionDate: "Spring 2022",
+    timeline: [
+      {
+        date: "January 1, 2022",
+        title: "Initial Consultation",
+        description: "Met with clients to discuss their vision and assess the space"
+      },
+      {
+        date: "February 15, 2022",
+        title: "Design Phase",
+        description: "Completed detailed design plans including drainage solutions and plant selection"
+      },
+      {
+        date: "March 1, 2022",
+        title: "Site Preparation",
+        description: "Began soil remediation and drainage system installation"
+      },
+      {
+        date: "April 15, 2022",
+        title: "Hardscaping",
+        description: "Installation of pavers, retaining walls, and water feature"
+      },
+      {
+        date: "May 1, 2022",
+        title: "Planting",
+        description: "Installation of trees, shrubs, and perennial plants"
+      },
+      {
+        date: "June 15, 2022",
+        title: "Irrigation",
+        description: "Installation and testing of efficient irrigation system"
+      },
+      {
+        date: "July 1, 2022",
+        title: "Project Completion",
+        description: "Final walkthrough and client orientation"
+      }
+    ]
   },
   {
     id: 3,
@@ -77,7 +157,44 @@ const projects: ProjectDetail[] = [
     ],
     client: "Dr. Chen",
     location: "San Francisco, California",
-    completionDate: "Fall 2022"
+    completionDate: "Fall 2022",
+    timeline: [
+      {
+        date: "August 1, 2022",
+        title: "Initial Consultation",
+        description: "Met with client to discuss their vision and assess the space"
+      },
+      {
+        date: "September 1, 2022",
+        title: "Design Phase",
+        description: "Completed detailed design plans including drainage solutions and plant selection"
+      },
+      {
+        date: "September 20, 2022",
+        title: "Site Preparation",
+        description: "Began soil remediation and drainage system installation"
+      },
+      {
+        date: "October 15, 2022",
+        title: "Hardscaping",
+        description: "Installation of pavers, retaining walls, and water feature"
+      },
+      {
+        date: "November 1, 2022",
+        title: "Planting",
+        description: "Installation of trees, shrubs, and perennial plants"
+      },
+      {
+        date: "November 15, 2022",
+        title: "Irrigation",
+        description: "Installation and testing of efficient irrigation system"
+      },
+      {
+        date: "December 1, 2022",
+        title: "Project Completion",
+        description: "Final walkthrough and client orientation"
+      }
+    ]
   },
   {
     id: 4,
@@ -96,7 +213,44 @@ const projects: ProjectDetail[] = [
     ],
     client: "Martinez-Kim Residence",
     location: "Chicago, Illinois",
-    completionDate: "Summer 2021"
+    completionDate: "Summer 2021",
+    timeline: [
+      {
+        date: "May 1, 2021",
+        title: "Initial Consultation",
+        description: "Met with clients to discuss their vision and assess the space"
+      },
+      {
+        date: "June 1, 2021",
+        title: "Design Phase",
+        description: "Completed detailed design plans including drainage solutions and plant selection"
+      },
+      {
+        date: "June 20, 2021",
+        title: "Site Preparation",
+        description: "Began soil remediation and drainage system installation"
+      },
+      {
+        date: "July 15, 2021",
+        title: "Hardscaping",
+        description: "Installation of containers and vertical growing structures"
+      },
+      {
+        date: "August 1, 2021",
+        title: "Planting",
+        description: "Installation of vegetables and herbs"
+      },
+      {
+        date: "August 15, 2021",
+        title: "Irrigation",
+        description: "Installation and testing of efficient irrigation system"
+      },
+      {
+        date: "September 1, 2021",
+        title: "Project Completion",
+        description: "Final walkthrough and client orientation"
+      }
+    ]
   },
   {
     id: 5,
@@ -115,7 +269,44 @@ const projects: ProjectDetail[] = [
     ],
     client: "Garcia Family",
     location: "Tucson, Arizona",
-    completionDate: "Spring 2023"
+    completionDate: "Spring 2023",
+    timeline: [
+      {
+        date: "January 1, 2023",
+        title: "Initial Consultation",
+        description: "Met with client to discuss their vision and assess the space"
+      },
+      {
+        date: "February 1, 2023",
+        title: "Design Phase",
+        description: "Completed detailed design plans including drainage solutions and plant selection"
+      },
+      {
+        date: "February 20, 2023",
+        title: "Site Preparation",
+        description: "Began soil remediation and drainage system installation"
+      },
+      {
+        date: "March 15, 2023",
+        title: "Hardscaping",
+        description: "Installation of pavers, retaining walls, and water feature"
+      },
+      {
+        date: "April 1, 2023",
+        title: "Planting",
+        description: "Installation of trees, shrubs, and perennial plants"
+      },
+      {
+        date: "April 15, 2023",
+        title: "Irrigation",
+        description: "Installation and testing of efficient irrigation system"
+      },
+      {
+        date: "May 1, 2023",
+        title: "Project Completion",
+        description: "Final walkthrough and client orientation"
+      }
+    ]
   },
   {
     id: 6,
@@ -134,7 +325,44 @@ const projects: ProjectDetail[] = [
     ],
     client: "Thompson Family",
     location: "Miami, Florida",
-    completionDate: "Summer 2022"
+    completionDate: "Summer 2022",
+    timeline: [
+      {
+        date: "June 1, 2022",
+        title: "Initial Consultation",
+        description: "Met with clients to discuss their vision and assess the space"
+      },
+      {
+        date: "June 15, 2022",
+        title: "Design Phase",
+        description: "Completed detailed design plans including drainage solutions and plant selection"
+      },
+      {
+        date: "June 25, 2022",
+        title: "Site Preparation",
+        description: "Began soil remediation and drainage system installation"
+      },
+      {
+        date: "July 15, 2022",
+        title: "Hardscaping",
+        description: "Installation of pool shell and surrounding space"
+      },
+      {
+        date: "August 1, 2022",
+        title: "Planting",
+        description: "Installation of tropical plants and landscaping"
+      },
+      {
+        date: "August 15, 2022",
+        title: "Irrigation",
+        description: "Installation and testing of efficient irrigation system"
+      },
+      {
+        date: "September 1, 2022",
+        title: "Project Completion",
+        description: "Final walkthrough and client orientation"
+      }
+    ]
   }
 ];
 
@@ -215,6 +443,9 @@ const PortfolioDetail = () => {
                 
                 <h2 className="text-2xl font-bold text-forest mt-8 mb-4">Results</h2>
                 <p className="text-earth mb-6">{project.results}</p>
+
+                <h2 className="text-2xl font-bold text-forest mt-8 mb-4">Project Timeline</h2>
+                <Timeline events={project.timeline} className="mt-6" />
               </div>
               
               <div className="mt-12 mb-8">
