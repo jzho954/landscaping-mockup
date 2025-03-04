@@ -1,8 +1,9 @@
+
 import { useState, useRef, useEffect } from "react";
 import { motion } from "framer-motion";
 import { ArrowLeft, ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 interface Project {
   id: number;
@@ -147,7 +148,10 @@ const Projects = () => {
                   transition={{ duration: 0.5, ease: "easeInOut" }}
                   className="w-full md:w-1/3 px-4 mb-8"
                 >
-                  <Link to={`/portfolio/${project.id}`} className="block h-full">
+                  <Link 
+                    to={`/portfolio/${project.id}`} 
+                    className="block h-full"
+                  >
                     <div className="bg-white rounded-xl overflow-hidden shadow-lg transition-all duration-300 hover:shadow-xl hover:scale-[1.02] h-full flex flex-col">
                       <div className="relative h-64 overflow-hidden">
                         <img 

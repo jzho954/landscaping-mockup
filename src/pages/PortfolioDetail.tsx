@@ -1,15 +1,18 @@
-
-import { useParams, Link } from "react-router-dom";
+import { useParams, Link, useNavigate } from "react-router-dom";
 import { ArrowLeft } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import { useEffect } from "react";
 
 const PortfolioDetail = () => {
   const { id } = useParams<{ id: string }>();
   const projectId = parseInt(id || "1");
   
-  // This data would typically come from an API or database
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+  
   const projects = [
     {
       id: 1,
