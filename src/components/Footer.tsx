@@ -73,6 +73,9 @@ const Footer = () => {
                 <button onClick={() => scrollToSection("testimonials")} className="text-gray-300 hover:text-lime transition-colors">Testimonials</button>
               </li>
               <li>
+                <button onClick={() => scrollToSection("portfolio")} className="text-gray-300 hover:text-lime transition-colors">Portfolio</button>
+              </li>
+              <li>
                 <button onClick={() => scrollToSection("faq")} className="text-gray-300 hover:text-lime transition-colors">FAQ</button>
               </li>
               <li>
@@ -122,8 +125,8 @@ const Footer = () => {
             </ul>
           </div>
         </div>
-        <div className="border-t border-forest-700 pt-8 text-center text-gray-300">
-          <p>&copy; {new Date().getFullYear()} GreenScape. All rights reserved.</p>
+        <div className="border-t border-forest-700 pt-8 text-center">
+          <p className="text-lime font-medium">&copy; {new Date().getFullYear()} GreenScape. All rights reserved.</p>
         </div>
       </div>
     </footer>

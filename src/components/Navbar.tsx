@@ -51,6 +51,7 @@ const Navbar = () => {
           <button onClick={() => scrollToSection("home")} className="nav-link">Home</button>
           <button onClick={() => scrollToSection("services")} className="nav-link">Services</button>
           <button onClick={() => scrollToSection("testimonials")} className="nav-link">Testimonials</button>
+          <button onClick={() => scrollToSection("portfolio")} className="nav-link">Portfolio</button>
           <button onClick={() => scrollToSection("faq")} className="nav-link">FAQ</button>
           <button onClick={() => scrollToSection("contact")} className="nav-link">Contact Us</button>
         </div>
@@ -83,6 +84,7 @@ const Navbar = () => {
             <button onClick={() => scrollToSection("home")} className="text-white hover:text-lime text-left py-2 transition-colors">Home</button>
             <button onClick={() => scrollToSection("services")} className="text-white hover:text-lime text-left py-2 transition-colors">Services</button>
             <button onClick={() => scrollToSection("testimonials")} className="text-white hover:text-lime text-left py-2 transition-colors">Testimonials</button>
+            <button onClick={() => scrollToSection("portfolio")} className="text-white hover:text-lime text-left py-2 transition-colors">Portfolio</button>
             <button onClick={() => scrollToSection("faq")} className="text-white hover:text-lime text-left py-2 transition-colors">FAQ</button>
             <button onClick={() => scrollToSection("contact")} className="text-white hover:text-lime text-left py-2 transition-colors">Contact Us</button>
           </div>
